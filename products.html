@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRODUCTS</title>
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="home.html"><i class="fas fa-home"></i> HOME</a></li>
+        <li><a href="about.html"><i class="fas fa-info-circle"></i> ABOUT US</a></li>
+        <li><a href="products.html" class="active"><i class="fas fa-box"></i> PRODUCTS</a></li>
+        <li><a href="services.html"><i class="fas fa-cogs"></i> SERVICES</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
+      </ul>
+    </nav>
+    <button class="cart-btn" onclick="openCart()">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <section class="product-area">
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-buttons">
+        <button onclick="filterProducts('ALL')" class="active">ALL</button>
+        <button onclick="filterProducts('ENGINE')">ENGINE PARTS</button>
+        <button onclick="filterProducts('FUEL')">FUEL PARTS</button>
+        <button onclick="filterProducts('IGNITION')">IGNITION PARTS</button>
+        <button onclick="filterProducts('COOLING')">COOLING PARTS</button>
+        <button onclick="filterProducts('LUBRICATION')">LUBRICATION PARTS</button>
+      </div>
+
+      <!-- =============== ENGINE PARTS =============== -->
+      <div class="category-box" data-category="ENGINE">
+        <h2>ENGINE PARTS</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/piston.jpg" alt="Piston">
+            <h3>PISTON</h3>
+            <p>High-quality piston for smooth engine operation.</p>
+            <p><strong>₱1,000</strong></p>
+            <button onclick="buyNow('Piston', 1000)">Buy Now</button>
+            <button onclick="addToCart('Piston', 1000)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/enginevalve.jpg" alt="Engine Valve">
+            <h3>ENGINE VALVE</h3>
+            <p>Durable valve for efficient fuel intake and exhaust.</p>
+            <p><strong>₱750</strong></p>
+            <button onclick="buyNow('Engine Valve', 750)">Buy Now</button>
+            <button onclick="addToCart('Engine Valve', 750)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/camshaft.webp" alt="Camshaft">
+            <h3>CAMSHAFT</h3>
+            <p>Precision camshaft for optimal engine timing.</p>
+            <p><strong>₱1,200</strong></p>
+            <button onclick="buyNow('Camshaft', 1200)">Buy Now</button>
+            <button onclick="addToCart('Camshaft', 1200)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/Crankshaft.jpg" alt="Crankshaft">
+            <h3>CRANKSHAFT</h3>
+            <p>Reliable crankshaft for smooth power delivery.</p>
+            <p><strong>₱1,800</strong></p>
+            <button onclick="buyNow('Crankshaft', 1800)">Buy Now</button>
+            <button onclick="addToCart('Crankshaft', 1800)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== FUEL PARTS =============== -->
+      <div class="category-box" data-category="FUEL">
+        <h2>FUEL PARTS</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/fuelpump.jpg" alt="Fuel Pump">
+            <h3>FUEL PUMP</h3>
+            <p>High-quality fuel pump for consistent fuel flow.</p>
+            <p><strong>₱800</strong></p>
+            <button onclick="buyNow('Fuel Pump', 800)">Buy Now</button>
+            <button onclick="addToCart('Fuel Pump', 800)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/fuel filter.avif" alt="Fuel Filter">
+            <h3>FUEL FILTER</h3>
+            <p>Protects your engine from impurities.</p>
+            <p><strong>₱450</strong></p>
+            <button onclick="buyNow('Fuel Filter', 450)">Buy Now</button>
+            <button onclick="addToCart('Fuel Filter', 450)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/fuel injector.jpg" alt="Fuel Injector">
+            <h3>FUEL INJECTOR</h3>
+            <p>Efficient fuel injector for better performance.</p>
+            <p><strong>₱1,100</strong></p>
+            <button onclick="buyNow('Fuel Injector', 1100)">Buy Now</button>
+            <button onclick="addToCart('Fuel Injector', 1100)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/fuelhose.jpg" alt="Fuel Hose">
+            <h3>FUEL HOSE</h3>
+            <p>Durable fuel hose resistant to heat and pressure.</p>
+            <p><strong>₱350</strong></p>
+            <button onclick="buyNow('Fuel Hose', 350)">Buy Now</button>
+            <button onclick="addToCart('Fuel Hose', 350)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== IGNITION PARTS =============== -->
+      <div class="category-box" data-category="IGNITION">
+        <h2>IGNITION PARTS</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/sparkplug.jpg" alt="Spark Plug">
+            <h3>SPARK PLUG</h3>
+            <p>Reliable spark plug for optimal engine ignition.</p>
+            <p><strong>₱150</strong></p>
+            <button onclick="buyNow('Spark Plug', 150)">Buy Now</button>
+            <button onclick="addToCart('Spark Plug', 150)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/ignition coil.jpeg" alt="Ignition Coil">
+            <h3>IGNITION COIL</h3>
+            <p>High voltage coil for strong spark output.</p>
+            <p><strong>₱950</strong></p>
+            <button onclick="buyNow('Ignition Coil', 950)">Buy Now</button>
+            <button onclick="addToCart('Ignition Coil', 950)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/distributor.jpg" alt="Distributor Cap">
+            <h3>DISTRIBUTOR CAP</h3>
+            <p>Durable distributor cap for consistent performance.</p>
+            <p><strong>₱500</strong></p>
+            <button onclick="buyNow('Distributor Cap', 500)">Buy Now</button>
+            <button onclick="addToCart('Distributor Cap', 500)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/ignition wire.webp" alt="Ignition Wire Set">
+            <h3>IGNITION WIRE SET</h3>
+            <p>High-quality wire set for smooth ignition.</p>
+            <p><strong>₱400</strong></p>
+            <button onclick="buyNow('Ignition Wire Set', 400)">Buy Now</button>
+            <button onclick="addToCart('Ignition Wire Set', 400)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== COOLING PARTS =============== -->
+      <div class="category-box" data-category="COOLING">
+        <h2>COOLING PARTS</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/radiator.jpg" alt="Radiator">
+            <h3>RADIATOR</h3>
+            <p>Efficient cooling radiator for optimal engine temperature.</p>
+            <p><strong>₱1,500</strong></p>
+            <button onclick="buyNow('Radiator', 1500)">Buy Now</button>
+            <button onclick="addToCart('Radiator', 1500)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/coolant.jpg" alt="Coolant">
+            <h3>COOLANT</h3>
+            <p>High-quality coolant for long-lasting performance.</p>
+            <p><strong>₱350</strong></p>
+            <button onclick="buyNow('Coolant', 350)">Buy Now</button>
+            <button onclick="addToCart('Coolant', 350)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/cooling fan.jpg" alt="Cooling Fan">
+            <h3>COOLING FAN</h3>
+            <p>Durable cooling fan for maintaining engine temperature.</p>
+            <p><strong>₱900</strong></p>
+            <button onclick="buyNow('Cooling Fan', 900)">Buy Now</button>
+            <button onclick="addToCart('Cooling Fan', 900)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/thermostat.jpg" alt="Thermostat">
+            <h3>THERMOSTAT</h3>
+            <p>Precise thermostat for perfect engine heat regulation.</p>
+            <p><strong>₱450</strong></p>
+            <button onclick="buyNow('Thermostat', 450)">Buy Now</button>
+            <button onclick="addToCart('Thermostat', 450)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== LUBRICATION PARTS =============== -->
+      <div class="category-box" data-category="LUBRICATION">
+        <h2>LUBRICATION PARTS</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="images/images.jpg" alt="Engine Oil">
+            <h3>ENGINE OIL</h3>
+            <p>Premium engine oil for smooth performance.</p>
+            <p><strong>₱700</strong></p>
+            <button onclick="buyNow('Engine Oil', 700)">Buy Now</button>
+            <button onclick="addToCart('Engine Oil', 700)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/lubricant.jpg" alt="Lubricant">
+            <h3>LUBRICANT</h3>
+            <p>High-quality lubricant to reduce friction.</p>
+            <p><strong>₱400</strong></p>
+            <button onclick="buyNow('Lubricant', 400)">Buy Now</button>
+            <button onclick="addToCart('Lubricant', 400)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/grease.avif" alt="Grease">
+            <h3>GREASE</h3>
+            <p>Long-lasting grease for all mechanical parts.</p>
+            <p><strong>₱350</strong></p>
+            <button onclick="buyNow('Grease', 350)">Buy Now</button>
+            <button onclick="addToCart('Grease', 350)">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/gear oil.png" alt="Gear Oil">
+            <h3>GEAR OIL</h3>
+            <p>Reliable gear oil for smooth transmission.</p>
+            <p><strong>₱600</strong></p>
+            <button onclick="buyNow('Gear Oil', 600)">Buy Now</button>
+            <button onclick="addToCart('Gear Oil', 600)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>&copy; 2025 C MOTOR PARTS. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <!-- ================= CART MODAL ================= -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCart()">&times;</span>
+      <h2>🛒 Your Cart</h2>
+      <div id="cartItems"></div>
+      <p id="cartTotal"><strong>Total: ₱0</strong></p>
+      <button onclick="checkoutCart()">Checkout</button>
+    </div>
+  </div>
+
+  <!-- ================= ORDER SUMMARY MODAL ================= -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Order Summary</h2>
+      <div id="orderDetails"></div>
+      <form id="orderForm">
+        <label>Full Name:</label>
+        <input type="text" id="customerName" required />
+        <label>Address:</label>
+        <textarea id="customerAddress" required></textarea>
+        <label>Payment Method:</label>
+        <select id="paymentMethod" required>
+          <option value="">-- Select Payment Method --</option>
+          <option value="COD">Cash on Delivery</option>
+          <option value="GCash">GCash</option>
+          <option value="Debit Card">Debit Card</option>
+        </select>
+        <button type="button" onclick="placeOrder()">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= SUCCESS MESSAGE MODAL ================= -->
+  <div id="successModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="backToProducts()">&times;</span>
+      <h2>✅ Order Successful</h2>
+      <p>Thank you for trusting us!</p>
+      <button onclick="backToProducts()">Back to Products</button>
+    </div>
+  </div>
+
+  <!-- ================= NOTICE MODAL (used by showNotice) ================= -->
+<div id="noticeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeNotice()">&times;</span>
+    <h2>Notice</h2>
+    <p id="noticeMessage" style="margin-top:10px;"></p>
+    <button type="button" onclick="closeNotice()" style="margin-top:16px;">OK</button>
+  </div>
+</div>
+
+<!-- ================= CONFIRM MODAL (used by showConfirm) ================= -->
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeConfirm()">&times;</span>
+    <h2>Confirm</h2>
+    <p id="confirmMessage" style="margin-top:10px;"></p>
+    <div style="margin-top:16px; display:flex; gap:10px; justify-content:center;">
+      <button id="confirmYes" type="button">Yes</button>
+      <button id="confirmNo" type="button">No</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- ================= ANIMATION ================= -->
+  <style>
+    @keyframes fadeInScale {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="css/js/products.js"></script>
+
+</body>
+</html>
+ 
+<script>
+    let cart = [];
+    let orders = [];
+
+    function saveOrders() {
+      localStorage.setItem("orders", JSON.stringify(orders));
+    }
+    function loadOrders() {
+      const data = localStorage.getItem("orders");
+      if (data) orders = JSON.parse(data);
+    }
+    loadOrders();
+
+    function addToCart(name, price) {
+      let item = cart.find((i) => i.name === name);
+      if (item) {
+        item.quantity++;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      updateCartCount();
+      showNotice("Added to cart: " + name);
+    }
+    function updateCartCount() {
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      document.getElementById("cartCount").textContent = count;
+    }
+    updateCartCount();
+
+    function openCart() {
+      document.getElementById("cartModal").style.display = "block";
+      renderCartItems();
+    }
+    function closeCart() {
+      document.getElementById("cartModal").style.display = "none";
+    }
+
+    function renderCartItems() {
+      const container = document.getElementById("cartItems");
+      container.innerHTML = "";
+      if (cart.length === 0) {
+        container.textContent = "Your cart is empty.";
+        document.getElementById("cartTotal").innerHTML = "<strong>Total: ₱0</strong>";
+        return;
+      }
+      let total = 0;
+      cart.forEach((item) => {
+        total += item.price * item.quantity;
+        const div = document.createElement("div");
+        div.textContent = `${item.name} x ${item.quantity} - ₱${item.price * item.quantity}`;
+        container.appendChild(div);
+      });
+      document.getElementById("cartTotal").innerHTML = `<strong>Total: ₱${total}</strong>`;
+    }
+
+    function checkoutCart() {
+      if (cart.length === 0) {
+        showNotice("Your cart is empty!");
+        return;
+      }
+      let orderDetails = "";
+      let total = 0;
+      cart.forEach((item) => {
+        orderDetails += `<p>${item.name} x ${item.quantity} - ₱${item.price * item.quantity}</p>`;
+        total += item.price * item.quantity;
+      });
+      orderDetails += `<p><strong>Total: ₱${total}</strong></p>`;
+      document.getElementById("orderDetails").innerHTML = orderDetails;
+
+      closeCart();
+      document.getElementById("orderModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("orderModal").style.display = "none";
+    }
+
+    function placeOrder() {
+      const name = document.getElementById("customerName").value.trim();
+      const address = document.getElementById("customerAddress").value.trim();
+      const payment = document.getElementById("paymentMethod").value;
+
+      if (!name || !address || !payment) {
+        showNotice("Please fill out all fields.");
+        return;
+      }
+
+      const orderId = "ORD" + Date.now();
+      const statuses = ["Accepted", "Declined"];
+      const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+
+      const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
+
+      const newOrder = {
+        id: orderId,
+        items: [...cart],
+        customerName: name,
+        customerAddress: address,
+        paymentMethod: payment,
+        total: total,
+        status: randomStatus,
+        timestamp: new Date().toLocaleString(),
+      };
+
+      orders.push(newOrder);
+      saveOrders();
+
+      cart = [];
+      updateCartCount();
+
+      closeModal();
+      document.getElementById("successModal").style.display = "block";
+    }
+
+    function backToProducts() {
+      document.getElementById("successModal").style.display = "none";
+    }
+
+    function showNotice(message) {
+      document.getElementById("noticeMessage").textContent = message;
+      document.getElementById("noticeModal").style.display = "block";
+    }
+    function closeNotice() {
+      document.getElementById("noticeModal").style.display = "none";
+    }
+
+    function openOrders() {
+      renderOrders();
+      document.getElementById("ordersModal").style.display = "block";
+    }
+    function closeOrders() {
+      document.getElementById("ordersModal").style.display = "none";
+    }
+
+    function renderOrders() {
+      const container = document.getElementById("ordersList");
+      container.innerHTML = "";
+
+      if (orders.length === 0) {
+        container.textContent = "You have no orders.";
+        return;
+      }
+
+      orders.forEach((order, index) => {
+        const div = document.createElement("div");
+        div.className = "order-item";
+
+        let itemsText = "";
+        order.items.forEach((i) => {
+          itemsText += `${i.name} x${i.quantity} (₱${i.price * i.quantity}), `;
+        });
+        itemsText = itemsText.slice(0, -2);
+
+        div.innerHTML = `
+          <p><strong>Order ID:</strong> ${order.id}</p>
+          <p><strong>Date:</strong> ${order.timestamp}</p>
+          <p><strong>Items:</strong> ${itemsText}</p>
+          <p><strong>Total:</strong> ₱${order.total}</p>
+          <p><strong>Name:</strong> ${order.customerName}</p>
+          <p><strong>Address:</strong> ${order.customerAddress}</p>
+          <p><strong>Payment:</strong> ${order.paymentMethod}</p>
+          <p><span class="order-status">Status: ${order.status}</span></p>
+          <button class="btn-cancel-order" onclick="cancelOrder(${index})">Cancel Order</button>
+        `;
+
+        container.appendChild(div);
+      });
+    }
+
+    function cancelOrder(index) {
+      showConfirm("Are you sure you want to cancel this order?", () => {
+        orders.splice(index, 1);
+        saveOrders();
+        renderOrders();
+        showNotice("Order cancelled.");
+      });
+    }
+
+    function showConfirm(message, yesCallback) {
+      const confirmModal = document.getElementById("confirmModal");
+      const confirmMessage = document.getElementById("confirmMessage");
+      confirmMessage.textContent = message;
+
+      confirmModal.style.display = "block";
+
+      const yesBtn = document.getElementById("confirmYes");
+      const noBtn = document.getElementById("confirmNo");
+
+      yesBtn.onclick = () => {
+        confirmModal.style.display = "none";
+        yesCallback();
+      };
+      noBtn.onclick = () => {
+        confirmModal.style.display = "none";
+      };
+    }
+    function closeConfirm() {
+      document.getElementById("confirmModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      [
+        "cartModal",
+        "orderModal",
+        "successModal",
+        "noticeModal",
+        "confirmModal",
+        "ordersModal",
+      ].forEach((id) => {
+        const modal = document.getElementById(id);
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    };
+  </script>
+</body>
+</html>

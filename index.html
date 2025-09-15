@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration & Login</title>
+  <link rel="stylesheet" href="css/index.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+  <div id="message-box" class="message"></div>
+
+  <div class="container">
+
+
+    <form id="register-form" class="form hidden">
+      <h2><i class="fa-solid fa-user-plus"></i> SIGN UP</h2>
+      <div class="message"></div>
+
+      <div class="form-group">
+             </i> <label for="fname">First Name:</label>   
+        <div class="input-wrapper">
+        <i class="fa-solid fa-id-card input-icon"></i>
+          <input type="text" id="fname" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="lname">Last Name:</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-id-card-clip input-icon"></i>
+          <input type="text" id="lname" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="reg-email">Email:</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-envelope input-icon"></i>
+          <input type="email" id="reg-email" required />
+        </div>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="reg-password">Password:</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-lock input-icon"></i>
+          <input type="password" id="reg-password" required />
+          <span class="toggle-password" onclick="togglePassword('reg-password', this)">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+      </div>
+
+      <button type="submit"><i class="fa-solid fa-user-check"></i> Register</button>
+      <p class="toggle-form">Already have an account? 
+        <a href="#" onclick="showLogin()">Log in here</a>
+      </p>
+    </form>
+
+
+    <form id="login-form" class="form">
+      <h2><i class="fa-solid fa-right-to-bracket"></i> LOG IN</h2>
+      <div class="message"></div>
+
+      <div class="form-group">
+        <label for="login-email">Email:</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-envelope input-icon"></i>
+          <input type="email" id="login-email" required />
+        </div>
+      </div>
+
+      <div class="form-group password-group">
+        <label for="login-password">Password:</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-lock input-icon"></i>
+          <input type="password" id="login-password" required />
+          <span class="toggle-password" onclick="togglePassword('login-password', this)">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+      </div>
+
+      <button type="button" onclick="handleLogin()"><i class="fa-solid fa-sign-in-alt"></i> Log In</button>
+      <p class="toggle-form"><a href="#" onclick="showForgotPassword()">Forgot Password?</a></p>
+      <p class="toggle-form">Don't have an account? 
+        <a href="#" onclick="showRegister()">Sign up here</a>
+      </p>
+    </form>
+
+ 
+    <form id="forgot-password-form" class="form hidden">
+      <h2><i class="fa-solid fa-key"></i> Reset Password</h2>
+
+     
+      <div class="form-group">
+        <label for="reset-email">Enter Email</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-envelope input-icon"></i>
+          <input type="email" id="reset-email" required placeholder="Enter your email">
+        </div>
+      </div>
+
+    
+      <div class="form-group password-group">
+        <label for="new-password">New Password</label>
+        <div class="input-wrapper">
+          <i class="fa-solid fa-lock input-icon"></i>
+          <input type="password" id="new-password" required placeholder="Enter new password">
+          <span class="toggle-password" onclick="togglePassword('new-password', this)">
+            <i class="fa-solid fa-eye"></i>
+          </span>
+        </div>
+      </div>
+
+
+  <div class="form-group password-group">
+    <label for="confirm-password">Confirm Password</label>
+    <div class="input-wrapper">
+      <i class="fa-solid fa-lock input-icon"></i>
+      <input type="password" id="confirm-password" required placeholder="Confirm new password">
+      <span class="toggle-password" onclick="togglePassword('confirm-password', this)">
+        <i class="fa-solid fa-eye"></i>
+      </span>
+    </div>
+  </div>
+
+  <!-- Message Box -->
+  <div class="message"></div>
+
+  <!-- Submit Button -->
+  <button type="submit"><i class="fa-solid fa-paper-plane"></i> Reset Password</button>
+
+  <!-- Optional Reset Button -->
+  <button type="button" id="reset-forgot-password-form"><i class="fa-solid fa-eraser"></i> Clear</button>
+
+  <!-- Back to Login -->
+  <div class="toggle-form">
+    <p><a href="#" onclick="showLogin()"><i class="fa-solid fa-arrow-left"></i> Back to Login</a></p>
+  </div>
+</form>
+
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 C MOTOR PARTS. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <script src="css/js/index.js"></script>
+</body>
+</html>
